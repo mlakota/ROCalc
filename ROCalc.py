@@ -64,7 +64,17 @@ class Calc(object):
 			variable=self.lvlVar, command=self.update).grid(
 			row=levelPosition[0], column=levelPosition[1]+1,
 			rowspan=2)
-	
+
+		jobPosition=[2,4]
+		Label(frame,text="Job level:").grid(rowspan=2,
+			row=jobPosition[0], column=jobPosition[1])
+		self.jobVar = IntVar()
+		self.jobVar.set(1)
+		Scale(frame, from_=1, to=50, orient=HORIZONTAL,
+			variable=self.jobVar, command=self.update).grid(
+			row=jobPosition[0], column=jobPosition[1]+1,
+			rowspan=2)
+
 	def update(self, event=None):
 		self.updateLeft()
 		
