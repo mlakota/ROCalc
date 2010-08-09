@@ -77,7 +77,12 @@ class Calc(object):
 
 	def update(self, event=None):
 		self.updateLeft()
+		self.updateBonus()
 		
+	def updateBonus(self):
+		for i in stat.keys():
+			self.bonusVars[stat[i]].set(jobsN['assassin'][i])
+
 	def updateLeft(self):
 		start = self.typeVar.get()
 		start += self.baseStatPoints()
