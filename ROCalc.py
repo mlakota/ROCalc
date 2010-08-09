@@ -166,7 +166,7 @@ class Calc(object):
 				stats += floor((i-1)/5+3)
 		self.lvlStats = stats
 
-		#update left stat points
+		# update left stat points
 		self.updateLeft()
 
 
